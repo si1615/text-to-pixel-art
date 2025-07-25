@@ -1,72 +1,80 @@
-# text-to-pixel-art
-🎨 Pixel Art Code Generator (Python + Tkinter)
-A lightweight Python app that turns custom color-coded strings into pixel art images using a live preview and save feature. Ideal for learning about image processing, creative coding, or building your own pixel art language.
+# 🎨 Pixel Art Code Generator (Python + Tkinter)
 
-✨ Features
-✅ Custom pixel input format like {widthxheight}012345...
+A lightweight Python app that turns custom color-coded strings into pixel art with a live preview and save feature. Ideal for learning image generation, creative expression, or designing your own pixel format.
 
-🎨 Supports blended colors (e.g. 0-1) and hex codes (e.g. [FF00FF])
+<img width="240" height="240" alt="pixel" src="https://github.com/user-attachments/assets/0992a011-f55f-43dd-83a5-068796e198df" />
 
-⚡ Live preview as you type
 
-💾 Save final output to PNG with one click
+---
 
-🧠 Color codes based on digits for easy use
+## ✨ Features
 
-🎨 Color Code Legend
-Code	Color
-0	Black
-1	White
-2	Red
-3	Orange
-4	Yellow
-5	Green
-6	Blue
-7	Purple
-8	Pink
-9	Teal
-0-1	Gray (blend)
-[RRGGBB]	Custom hex color
+- ✅ Type pixel codes in a simple `{widthxheight}` format
+- 🧠 Uses digits (`0`–`9`) and color codes for easy pixel control
+- 🎨 Blended and hex colors supported (e.g. `0-1`, `[FF00FF]`)
+- 🔁 **Live preview** as you type
+- 💾 Save your pixel art as PNG with one click
+- 🐍 Written in pure Python with Tkinter + Pillow
 
-🧪 Example Input
-Copy
-Edit
-{5x3}01234\
-12345\
+---
+
+## 🧾 Format Overview
+
+- Input starts with dimensions like `{8x8}`
+- Followed by color codes:
+  - `0–9`: mapped to basic colors
+  - `0-1`: blend two color codes
+  - `[RRGGBB]`: custom hex color
+
+Example:
+{5x3}01234
+12345
 23456
-Creates a 5×3 pixel art image with digits mapped to their colors.
 
-🖥️ How to Run
-Make sure you have Python 3 and Pillow installed:
-
-bash
+yaml
 Copy
 Edit
+
+---
+
+## 🎨 Color Code Legend
+
+| Code | Color     |
+|------|-----------|
+| 0    | Black     |
+| 1    | White     |
+| 2    | Red       |
+| 3    | Orange    |
+| 4    | Yellow    |
+| 5    | Green     |
+| 6    | Blue      |
+| 7    | Purple    |
+| 8    | Pink      |
+| 9    | Teal      |
+| 0-1  | Gray (blend) |
+| [RRGGBB] | Custom hex |
+
+---
+
+## 🐱 Example (bad) Cat (8x8)
+
+{8x8}00001100
+01112210
+01223310
+01233310
+01222210
+00111000
+00000000
+00000000
+
+
+
+---
+
+## 🚀 How to Run
+
+1. Make sure you have Python 3 installed
+2. Install Pillow:
 pip install pillow
 Run the app:
-
-bash
-Copy
-Edit
 python pixel_art_app.py
-Type your art string into the textbox and see live preview instantly!
-
-🗂️ File Structure
-bash
-Copy
-Edit
-pixel_art_app.py  # Main program
-README.md         # This file
-🐱 Want Examples?
-Try this simple cat face:
-
-Copy
-Edit
-{8x8}00001100\
-01112210\
-01223310\
-01233310\
-01222210\
-00111000\
-00000000\
-00000000
